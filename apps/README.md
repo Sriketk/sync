@@ -1,1 +1,0 @@
-contains differnet sync applicaitons
