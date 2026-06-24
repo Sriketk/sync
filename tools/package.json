@@ -1,0 +1,12 @@
+{
+  "name": "@repo/tools",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "stack:up": "docker compose -f ../infra/docker-compose.yml up postgres -d",
+    "stack:down": "docker compose -f ../infra/docker-compose.yml down",
+    "relay": "bun run --filter relay dev",
+    "y-websocket": "bun run --filter y-websocket dev"
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "name": "y-websocket",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "bun run --watch src/index.ts",
+    "start": "bun run src/index.ts",
+    "check": "vp check"
+  },
+  "devDependencies": {
+    "@types/bun": "latest",
+    "typescript": "~6.0.2",
+    "vite-plus": "catalog:"
+  }
+}

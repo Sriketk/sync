@@ -5,6 +5,7 @@
   "workspaces": [
     "packages/*",
     "apps/*",
+    "servers/*",
     "tools/*"
   ],
   "type": "module",
@@ -12,6 +13,10 @@
   "scripts": {
     "ready": "vp check && vp run -r build",
     "dev": "vp run web#dev",
+    "dev:relay": "bun run --filter relay dev",
+    "dev:y-websocket": "bun run --filter y-websocket dev",
+    "stack:up": "docker compose -f infra/docker-compose.yml up postgres -d",
+    "stack:down": "docker compose -f infra/docker-compose.yml down",
     "build": "vp run -r build",
     "check": "vp check"
   },

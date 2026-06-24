@@ -1,0 +1,31 @@
+# Postgres for PowerSync, Electric, and Zero demos.
+# Usage:
+#   docker compose -f infra/docker-compose.yml up postgres -d
+#   docker compose -f infra/docker-compose.yml --profile electric up -d
+
+services:
+  postgres:
+    image: postgres:16-alpine
+    ports:
+      - "${POSTGRES_PORT:-5432}:5432"
+    environment:
+      POSTGRES_USER: ${POSTGRES_USER:-sync}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-sync}
+      POSTGRES_DB: ${POSTGRES_DB:-sync}
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+      - ./postgres/init:/docker-entrypoint-initdb.d:ro
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U ${POSTGRES_USER:-sync}"]
+      interval: 5s
+      timeout: 5s
+      retries: 5
+
+  # Add engine-specific services under profiles as you implement each demo.
+  # electric:
+  #   profiles: [electric]
+  # zero-cache:
+  #   profiles: [zero]
+
+volumes:
+  postgres_data:

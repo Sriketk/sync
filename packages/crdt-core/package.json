@@ -1,0 +1,23 @@
+{
+  "name": "@repo/crdt-core",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "exports": {
+    ".": "./src/index.ts",
+    "./timestamp": "./src/timestamp.ts",
+    "./merkle": "./src/merkle.ts",
+    "./message": "./src/message.ts",
+    "./store": "./src/store.ts"
+  },
+  "scripts": {
+    "check": "vp check"
+  },
+  "dependencies": {
+    "@repo/demo": "workspace:*"
+  },
+  "devDependencies": {
+    "typescript": "~6.0.2",
+    "vite-plus": "catalog:"
+  }
+}
