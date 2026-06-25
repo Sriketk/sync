@@ -32,7 +32,7 @@ packages/
   crdt-core/            # DIY Actual-style HLC, merkle, field-LWW
 servers/
   relay/                # message log for DIY CRDT demos
-  y-websocket/          # Yjs WebSocket relay placeholder
+  yjs-ws/               # Yjs WebSocket server (@y/websocket-server, :8788)
 infra/
   docker-compose.yml    # Postgres (+ engine profiles later)
 tools/
@@ -44,9 +44,12 @@ tools/
 ```bash
 bun install
 bun run dev             # start apps/web hub
+bun run dev:yjs-ws      # Yjs WebSocket server (ws://localhost:8788)
 bun run check           # lint, format, typecheck
 bun run build           # build all workspaces
 ```
+
+Yjs client app: `bun run --filter app-yjs dev` (:5174). See `servers/yjs-ws/README.md`.
 
 Use `bunx vp` if the `vp` binary is not on your PATH (Vite+ is installed locally).
 

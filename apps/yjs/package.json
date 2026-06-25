@@ -1,5 +1,5 @@
 {
-  "name": "yjs",
+  "name": "app-yjs",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -9,10 +9,12 @@
     "preview": "vp preview"
   },
   "dependencies": {
+    "@repo/demo": "workspace:*",
     "@repo/ui": "workspace:*",
     "react": "^19.2.0",
     "react-dom": "^19.2.0",
-    "@repo/demo": "workspace:*"
+    "y-websocket": "^3.0.0",
+    "yjs": "^13.6.31"
   },
   "devDependencies": {
     "@tailwindcss/vite": "^4.1.18",

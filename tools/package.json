@@ -7,6 +7,6 @@
     "stack:up": "docker compose -f ../infra/docker-compose.yml up postgres -d",
     "stack:down": "docker compose -f ../infra/docker-compose.yml down",
     "relay": "bun run --filter relay dev",
-    "y-websocket": "bun run --filter y-websocket dev"
+    "yjs-ws": "bun run --filter yjs-ws dev"
   }
 }

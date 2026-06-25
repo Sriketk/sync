@@ -1,0 +1,19 @@
+{
+  "name": "yjs-ws",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "HOST=${HOST:-localhost} PORT=${PORT:-8788} bun x y-websocket",
+    "start": "HOST=${HOST:-localhost} PORT=${PORT:-8788} bun x y-websocket",
+    "check": "vp check"
+  },
+  "dependencies": {
+    "@y/websocket-server": "^0.1.5",
+    "@y/y": "^14.0.0-rc.7"
+  },
+  "devDependencies": {
+    "typescript": "~6.0.2",
+    "vite-plus": "catalog:"
+  }
+}
