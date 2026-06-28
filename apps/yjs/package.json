@@ -5,19 +5,25 @@
   "type": "module",
   "scripts": {
     "dev": "vp dev",
-    "build": "tsc -b && vp build",
+    "build": "vp build && tsc -b",
     "preview": "vp preview"
   },
   "dependencies": {
     "@repo/demo": "workspace:*",
     "@repo/ui": "workspace:*",
+    "@tanstack/react-router": "^1.170.16",
+    "quill": "^2.0.3",
+    "quill-cursors": "^4.3.0",
     "react": "^19.2.0",
     "react-dom": "^19.2.0",
+    "y-quill": "^1.0.0",
+    "y-webrtc": "^10.3.0",
     "y-websocket": "^3.0.0",
     "yjs": "^13.6.31"
   },
   "devDependencies": {
     "@tailwindcss/vite": "^4.1.18",
+    "@tanstack/router-plugin": "^1.168.18",
     "@types/react": "^19.2.7",
     "@types/react-dom": "^19.2.3",
     "@vitejs/plugin-react": "^5.1.1",
